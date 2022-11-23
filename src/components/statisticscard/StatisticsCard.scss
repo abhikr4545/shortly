@@ -1,0 +1,52 @@
+@use "../../index.scss";
+
+.card {
+  background-color: white;
+  position: relative;
+  max-width: 320px;
+  margin: 0 auto;
+  margin-top: 80px;
+  height: 280px;
+  padding-top: 75px;
+  font-family: index.$poppins;
+  border-radius: 10px;
+  text-align: center;
+
+  .icon {
+    background-color: index.$very-dark-blue;
+    width: fit-content;
+    margin: auto;
+    padding: 20px;
+    border-radius: 50%;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: -40px;
+  }
+
+  h2 {
+    font-weight: 700;
+  }
+
+  p {
+    color: index.$gray;
+    padding: 0 10px;
+  }
+
+  @media (min-width: 500px) {
+    margin: 0;
+    max-width: 420px;
+    text-align: left;
+    padding: 75px 45px 0 45px;
+
+    .icon {
+      left: -200px;
+    }
+
+    p {
+      padding: 0;
+      width: 310px;
+    }
+  }
+}

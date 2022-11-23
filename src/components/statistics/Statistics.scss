@@ -1,0 +1,110 @@
+@use "../../index.scss";
+
+.container {
+  background-color: rgb(236, 231, 231);
+
+  .statistics {
+    margin: auto;
+    text-align: center;
+    font-family: index.$poppins;
+    padding-bottom: 80px;
+    position: relative;
+
+    .heading {
+      color: index.$very-dark-violet;
+      padding-top: 140px;
+    }
+
+    p {
+      max-width: 300px;
+      margin: 0 auto;
+      margin-top: 20px;
+      color: index.$grayish-violet;
+    }
+
+    .card-container {
+      & > :first-child {
+        &::after {
+          content: "";
+          position: absolute;
+          width: 40px;
+          height: 10px;
+          left: 0px;
+          right: 0;
+          margin: 0 auto;
+          background-color: index.$cyan;
+          bottom: -25px;
+          transform: rotate(90deg);
+        }
+      }
+
+      & > :nth-child(2) {
+        &::after {
+          content: "";
+          position: absolute;
+          width: 40px;
+          height: 10px;
+          left: 0px;
+          right: 0;
+          margin: 0 auto;
+          background-color: index.$cyan;
+          bottom: -25px;
+          transform: rotate(90deg);
+        }
+      }
+    }
+  }
+
+  @media (min-width: 500px) {
+    .statistics {
+
+
+      .heading {
+        font-size: 60px;
+      }
+
+      p {
+        max-width: 480px;
+      }
+
+      .card-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: index.$container;
+        margin: 0 auto;
+        width: 100%;
+        gap: 40px;
+        position: relative;
+
+        & > :first-child {
+          &::after {
+            width: 70px;
+            height: 10px;
+            left: 400px;
+            margin: 0;
+            top: 180px;
+            transform: rotate(180deg);
+          }
+        }
+
+        & > :nth-child(2) {
+          margin-top: 140px;
+          &::after {
+            width: 70px;
+            height: 10px;
+            left: 400px;
+            margin: 0;
+            top: 180px;
+            transform: rotate(180deg);
+          }
+        }
+
+        & > :nth-child(3) {
+          margin-top: 280px;
+        }
+      }
+    }
+  }
+
+}
